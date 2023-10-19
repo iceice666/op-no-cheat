@@ -56,4 +56,4 @@ jobs:
           loaders: fabric
           java: 17
 
-          name: "ResourcePack Server v${{ steps.read-property.outputs.mod_version }}"
+          name: "OP no cheat v${{ steps.read-property.outputs.mod_version }}"

@@ -26,8 +26,7 @@ public class Mod implements ModInitializer {
     Toml defaultRuleSets = new Toml()
             .read(
                     """
-
-                            
+                     
 [common]
     whitelist = []
     blacklist = [
