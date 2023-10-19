@@ -25,12 +25,13 @@ import java.util.Objects;
 public class ModMixin {
 
 
-    @Shadow
-    @Final
-    private static Logger LOGGER;
+
 
     @Mixin(CommandManager.class)
     public static class CommandManagerMixin {
+        @Shadow
+        @Final
+        private static Logger LOGGER;
         @Inject(at = @At("HEAD"), method = "execute(Lcom/mojang/brigadier/ParseResults;Ljava/lang/String;)I", cancellable = true)
         private void executeChecker(ParseResults<ServerCommandSource> parseResults, String command,
                                     CallbackInfoReturnable<Integer> cir) {
